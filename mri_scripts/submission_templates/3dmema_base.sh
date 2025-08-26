@@ -1,12 +1,10 @@
 dataset_dir=/mnt/nfs/lss/lss_kahwang_hpc/data/FPNHIU/
 deconvolve_dir="/mnt/nfs/lss/lss_kahwang_hpc/data/FPNHIU/3dDeconvolve"
-subjects=(10008 10024 10263 10280 10281 10283 10303 10305 10306 10309 \
-        10310 10311 10313 10314 10315 10316 10320 10323 10324 10326 \
-        10327 10332 10334 10336 10340 10341 10344 10346 10348 10349 \
-        10350 10353 10355 10356 10357 10359 10360 10374)  
+subjects=(S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID \
+        S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID \
+        S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID \
+        S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID S#_ID) # need to replace S#_ID with actual id numbers and delete this comment
 num_of_subs=38
-# 10008 10024 10263 10280 10281 10283 10303 10305 10306 10309 10310 10311 10313 10314 10315 10316 10320 10323 10324 10326 10327 10332 10334 10336 10340 10341 10344 10346 10348 10349 10350 10353 10355 10356 10357 10359 10360 10374
-#   1     2     3     4     5     6     7     8     9    10     11    12    13    14    15    16    17    18    19    20    21    22    23    24    25    26    27    28    29    30    31    32    33    34   35    36    37     38   
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 # - - - - - Run 3dDeconvolve WITH parametric modulation - - - - - - #
