@@ -42,7 +42,7 @@ outermost_folder
  |      |     | pipeline.sh
  |      |     | plotting_notebook.ipynb
 
-To re-generate results from scratch, you will need to download BIDS-formatted subject data to the BIDS folder and behavioral data files (.csv format) to the CSVs folder. All other folders will be filled in as scripts are run
+To re-generate results from scratch, you will need to download BIDS-formatted subject data to the BIDS folder and behavioral data files (.csv format) to the CSVs folder. All other folders will be filled in as scripts are run.
 
-The pipeline.sh script indicates which scripts to run and in what order to run them. This script is set up to submit jobs to a HCP (at uiowa we use the argon hcp). Jobs are set up to run in parallel--each subject is run separately
-
+The pipeline.sh script indicates which scripts to run and in what order to run them. This script is set up to submit jobs to a HCP (at uiowa we use the argon hcp). Jobs are set up to run in parallel--each subject is run separately.
+At the time these scripts were created/run, the OS for the HCP was CentOS and the job scheduling system was Sun Grid Engine (SGE).
