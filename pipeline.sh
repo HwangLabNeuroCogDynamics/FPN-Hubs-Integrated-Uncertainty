@@ -292,23 +292,3 @@ else
     qsub -hold_jid $l_jid ${project_dir}mri_scripts/submitted_scripts/NetworkHubs_$cur_datetime.sh
 fi
 
-
-# # # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    
-# # # - - - - - - - - - - - -    Functional Connectivity     - - - - - - - - - - - - 
-#l_jid=0 # uncomment this if you comment out the "3dLSS" code above
-echo 3dLSS script has finished running... submitting Functional Connectivity now
-cat ${project_dir}mri_scripts/submission_templates/header_info.sh ${project_dir}mri_scripts/submission_templates/FuncConnectivity_base.sh >> ${project_dir}mri_scripts/submitted_scripts/FuncConnectivity_$cur_datetime.sh
-sed -i "34d" ${project_dir}mri_scripts/submitted_scripts/FuncConnectivity_$cur_datetime.sh
-sed -i "23i ${arrtxt}" ${project_dir}mri_scripts/submitted_scripts/FuncConnectivity_$cur_datetime.sh
-sed -i "21i ${subtxt}" ${project_dir}mri_scripts/submitted_scripts/FuncConnectivity_$cur_datetime.sh
-sed -i "14i ${emailtxt}" ${project_dir}mri_scripts/submitted_scripts/FuncConnectivity_$cur_datetime.sh
-sed -i "11i ${c_threads}" ${project_dir}mri_scripts/submitted_scripts/FuncConnectivity_$cur_datetime.sh
-sed -i "5i ${de_name}" ${project_dir}mri_scripts/submitted_scripts/FuncConnectivity_$cur_datetime.sh
-chmod 775 ${project_dir}mri_scripts/submitted_scripts/FuncConnectivity_$cur_datetime.sh
-if [ $l_jid -lt 1 ]; then
-    echo skipped LSS so no need to hold job
-    qsub ${project_dir}mri_scripts/submitted_scripts/FuncConnectivity_$cur_datetime.sh
-else
-    echo holding job ... waiting on LSS
-    qsub -hold_jid $l_jid ${project_dir}mri_scripts/submitted_scripts/FuncConnectivity_$cur_datetime.sh
-fi
