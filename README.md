@@ -1,9 +1,10 @@
 # FPN-Hubs-Integrated-Uncertainty
 Code repository for manuscript titled "Frontoparietal Hubs Leverage Probabilistic Representations and Integrated Uncertainty to Guide Cognitive Flexibility"
+Citation: Leach, S. C., Hollow, H., Jiang, J., & Hwang, K. (in press). Frontoparietal Hubs Leverage Probabilistic Representations and Integrated Uncertainty to Guide Cognitive Flexibility. Journal of Neuroscience.
 
 The data collection script assumes the following subfolders exist: Data_MRI, images/Faces, images/Scenes
 
-The preprocessing and analysis scripts assume the following folder structure
+The preprocessing and analysis scripts assume the following folder structure and singularity containers
 
 outermost_folder
  |
