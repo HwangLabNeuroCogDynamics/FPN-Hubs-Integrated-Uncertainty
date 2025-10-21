@@ -1,7 +1,9 @@
 # FPN-Hubs-Integrated-Uncertainty
 Code repository for manuscript titled "Frontoparietal Hubs Leverage Probabilistic Representations and Integrated Uncertainty to Guide Cognitive Flexibility"
 
-The scripts assume the following folder structure
+The data collection script assumes the following subfolders exist: Data_MRI, images/Faces, images/Scenes
+
+The preprocessing and analysis scripts assume the following folder structure
 
 outermost_folder
  |
@@ -45,4 +47,4 @@ outermost_folder
 To re-generate results from scratch, you will need to download BIDS-formatted subject data to the BIDS folder and behavioral data files (.csv format) to the CSVs folder. All other folders will be filled in as scripts are run.
 
 The pipeline.sh script indicates which scripts to run and in what order to run them. This script is set up to submit jobs to a HCP (at uiowa we use the argon hcp). Jobs are set up to run in parallel--each subject is run separately.
-At the time these scripts were created/run, the OS for the HCP was CentOS and the job scheduling system was Sun Grid Engine (SGE).
+At the time these scripts were created/run (2025), the OS for the HCP was CentOS and the job scheduling system was Sun Grid Engine (SGE).
